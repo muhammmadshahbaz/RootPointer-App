@@ -1,6 +1,7 @@
 import 'package:first_project/Screens/auth/signup.dart';
 import 'package:flutter/material.dart';
 
+import '../../Widgets/custom_button.dart';
 import 'forget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -85,22 +86,7 @@ class LoginScreenState extends State<LoginScreen> {
            const SizedBox(
         height: 60,
            ),
-      
-           ElevatedButton(
-        onPressed: () {},
-        
-         style: ButtonStyle(
-              padding:  MaterialStateProperty.all(EdgeInsets.zero),
-          backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 6, 31, 51)),
-          shape: MaterialStateProperty.all(
-        RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25.0),
-        ),
-          ),
-          minimumSize: MaterialStateProperty.all(const Size(250, 55)),
-        ),
-        child: const Text('login', style: TextStyle(fontSize: 20),),
-           ),
+           const CustomButton(buttonText: "Login", backgroundColor: Color.fromARGB(255, 3, 34, 59),),
            Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

@@ -1,7 +1,12 @@
 
- import 'package:first_project/Screens/auth/login.dart';
+ //import 'dart:html';
+
+import 'package:first_project/Screens/auth/login.dart';
+//import 'package:flutter/cupertino.dart';
 // import 'package:first_project/Screens/custom_textfield.dart';
 import 'package:flutter/material.dart';
+
+import '../../Widgets/custom_button.dart';
 
 
 
@@ -87,23 +92,7 @@ class _SignupScreenState extends State<SignupScreen> {
         height: 60,
            ),
       
-           ElevatedButton(
-        onPressed: () {},
-        
-         style: ButtonStyle(
-              padding:  MaterialStateProperty.all(EdgeInsets.zero),
-          backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 6, 31, 51)),
-          shape: MaterialStateProperty.all(
-        RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25.0),
-        ),
-          ),
-          minimumSize: MaterialStateProperty.all(const Size(250, 55)),
-        ),
-        child: const Text('SIGN UP', style: TextStyle(fontSize: 20),),
-      
-      
-           ),
+            const CustomButton(buttonText: "Signup", backgroundColor: Color.fromARGB(255, 3, 34, 59),),
            Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -114,7 +103,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Navigator.push(context
                 , MaterialPageRoute(builder: ((context) => const LoginScreen())),);
               },
-                child: const Text('LOGin',style: TextStyle(color: Colors.green),),
+                child: const Text('Login',style: TextStyle(color: Colors.green),),
               )
         ],
            ),
@@ -131,3 +120,4 @@ class _SignupScreenState extends State<SignupScreen> {
     
   }
 }
+
