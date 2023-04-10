@@ -92,7 +92,7 @@ class _SignupScreenState extends State<SignupScreen> {
         height: 60,
            ),
       
-            const CustomButton(buttonText: "Signup", backgroundColor: Color.fromARGB(255, 3, 34, 59),),
+            const CustomButton(buttonText: "Signup", backgroundColor: Color.fromARGB(255, 3, 34, 59), textColor: Colors.white,),
            Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

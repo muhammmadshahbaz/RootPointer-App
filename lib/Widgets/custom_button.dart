@@ -2,18 +2,17 @@
 //import 'package:flutter/cupertino.dart';
 //import 'dart:html';
 
-import 'package:first_project/Screens/auth/signup.dart';
+//import 'package:first_project/Screens/auth/signup.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    super.key,required this.buttonText,  required this.backgroundColor, this.onTap,
+    super.key,required this.buttonText,  required this.backgroundColor, this.onTap, this.textColor,
   });
   final String buttonText;
 final Color backgroundColor;
 final Function()? onTap;
-
-
+final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ final Function()? onTap;
           ),
           minimumSize: MaterialStateProperty.all(const Size(250, 55))
         ),
-        child:  Text(buttonText , style: const TextStyle(fontSize: 20),),
+        child:  Text(buttonText , style:  TextStyle(fontSize: 20, color :textColor),),
       
       
     );

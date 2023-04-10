@@ -2,6 +2,7 @@ import 'package:first_project/Screens/auth/verify.dart';
 import 'package:flutter/material.dart';
 
 //import '../../Widgets/custom_textfield.dart';
+import '../../Widgets/custom_button.dart';
 import 'login.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
@@ -60,29 +61,11 @@ class _ForgetscreenState extends State<Forgetscreen> {
                   const SizedBox(
                     height: 60,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                       Navigator.push(context
+                    CustomButton(buttonText: "SEND", backgroundColor: Colors.yellow,
+                    textColor: Colors.black, onTap: () {
+                      Navigator.push(context
                 , MaterialPageRoute(builder: ((context) => const Varifyscreen())),);
-                    },
-                    style: ButtonStyle(
-                      padding: MaterialStateProperty.all(EdgeInsets.zero ),
-                      backgroundColor: MaterialStateProperty.all(Colors.yellow),
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25.0),
-                          
-                        )
-                      ),
-                      minimumSize: MaterialStateProperty.all(const Size(245, 55))
-
-                    ),
-                    child: const Text('SEND', style: TextStyle(color: Color.fromARGB(255, 10, 10, 10),
-                      fontWeight: FontWeight.bold
-                    ),),
-                    
-                  )
-
+                    },),
 
                 
                 

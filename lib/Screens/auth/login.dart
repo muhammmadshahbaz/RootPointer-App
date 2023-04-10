@@ -86,7 +86,7 @@ class LoginScreenState extends State<LoginScreen> {
            const SizedBox(
         height: 60,
            ),
-           const CustomButton(buttonText: "Login", backgroundColor: Color.fromARGB(255, 3, 34, 59),),
+           const CustomButton(buttonText: "Login", backgroundColor: Color.fromARGB(255, 3, 34, 59), textColor: Colors.white,),
            Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

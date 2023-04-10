@@ -1,6 +1,7 @@
 import 'package:first_project/Screens/auth/verify.dart';
 import 'package:flutter/material.dart';
 
+import '../../Widgets/custom_button.dart';
 import '../../Widgets/custom_textfield.dart';
 //import 'package:flutter/services.dart';
 //import 'package:pin_code_fields/pin_code_fields.dart';
@@ -76,27 +77,10 @@ class _ForgetscreenState extends State<NewpasswordScreen> {
                   const SizedBox(
                     height: 20, 
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                    },
-                    style: ButtonStyle(
-                      padding: MaterialStateProperty.all(EdgeInsets.zero ),
-                      backgroundColor: MaterialStateProperty.all(Colors.yellow),
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25.0),
-                          
-                        )
-                      ),
-                      minimumSize: MaterialStateProperty.all(const Size(245, 55))
-
-                    ),
-                    child: const Text('SAVE', style: TextStyle(color: Color.fromARGB(255, 10, 10, 10),
-                      fontWeight: FontWeight.bold, fontSize: 20
-                    ),),
-                    
-                  )
-
+                  CustomButton(buttonText: "SAVE", backgroundColor: Colors.yellow,
+                   textColor: Colors.black,
+                    onTap: () {
+                  }, ),
                    
                 
                 

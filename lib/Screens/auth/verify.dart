@@ -1,9 +1,13 @@
+import 'dart:developer';
+
+import 'package:first_project/Screens/auth/newpassword.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
+import '../../Widgets/custom_button.dart';
 import 'forget.dart';
-import 'newpassword.dart';
+//import 'newpassword.dart';
 
 class Varifyscreen extends StatefulWidget {
   const Varifyscreen({super.key});
@@ -74,10 +78,10 @@ class _ForgetscreenState extends State<Varifyscreen> {
    animationDuration:const Duration(milliseconds: 300),
    enableActiveFill: true,
   onChanged: (value) {
-    print(value);
+    log(value);
   },
    beforeTextPaste: (text) {
-    print("Allowing to paste $text");
+    log("Allowing to paste $text");
     return true;
    }, appContext: context,
 ),
@@ -95,28 +99,13 @@ class _ForgetscreenState extends State<Varifyscreen> {
                   const SizedBox(
                     height: 60, 
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                       Navigator.push(context
+                   CustomButton(buttonText: "VARIFY", backgroundColor: Colors.yellow,
+                   textColor: Colors.black,
+                    onTap: () {
+                     Navigator.push(context
                 , MaterialPageRoute(builder: ((context) => const NewpasswordScreen())),);
-                    },
-                    style: ButtonStyle(
-                      padding: MaterialStateProperty.all(EdgeInsets.zero ),
-                      backgroundColor: MaterialStateProperty.all(Colors.yellow),
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25.0),
-                          
-                        )
-                      ),
-                      minimumSize: MaterialStateProperty.all(const Size(245, 55))
-
-                    ),
-                    child: const Text('VARIFY', style: TextStyle(color: Color.fromARGB(255, 10, 10, 10),
-                      fontWeight: FontWeight.bold, fontSize: 20
-                    ),),
-                    
-                  )
+                  }, ),
+                  
 
                    
                 
