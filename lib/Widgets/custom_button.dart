@@ -1,8 +1,4 @@
 
-//import 'package:flutter/cupertino.dart';
-//import 'dart:html';
-
-//import 'package:first_project/Screens/auth/signup.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
